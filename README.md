@@ -13,6 +13,16 @@ This repository contains Pokemon GO game data in JSON format, the data includes 
 | `eggs.min.json` | 24 KB | Egg hatches only |
 | `rocketLineups.min.json` | 38 KB | Team GO Rocket lineups only |
 
+## CDN LINKS
+| File                     | CDN URL                                                                    |
+|--------------------------|----------------------------------------------------------------------------|
+| `combined.min.json`      | https://cdn.jsdelivr.net/gh/quantNebula/data@master/combined.min.json      |
+| `events.min.json`        | https://cdn.jsdelivr.net/gh/quantNebula/data@master/events.min.json        |
+| `raids.min.json`         | http://cdn.jsdelivr.net/gh/quantNebula/data@master/raids.min.json          |
+| `research.min.json`      | https://cdn.jsdelivr.net/gh/quantNebula/data@master/research.min.json      |
+| `eggs.min.json`          | https://cdn.jsdelivr.net/gh/quantNebula/data@master/eggs.min.json          |
+| `rocketLineups.min.json` | https://cdn.jsdelivr.net/gh/quantNebula/data@master/rocketLineups.min.json |
+
 ## File Structures
 
 ### combined.min.json
