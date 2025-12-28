@@ -37,7 +37,7 @@
     "rocketLineups": [
         {
             "name": "Cliff",
-            "title": "Team GO Rocket Leader",
+            "title": "Team Rocket Leader",
             "...": "..."
         }
     ],
@@ -60,5 +60,5 @@ This file aggregates the data from all other individual JSON files into a single
 | **`raids`** | `array` | [raids.md](raids.md) | List of current Raid Bosses. |
 | **`research`** | `object` | [research.md](research.md) | Current field research tasks and seasonal info. |
 | **`eggs`** | `array` | [eggs.md](eggs.md) | List of Pokémon currently hatching from eggs. |
-| **`rocketLineups`** | `array` | [rocketLineups.md](rocketLineups.md) | Current Team GO Rocket member lineups. |
+| **`rocketLineups`** | `array` | [rocketLineups.md](rocketLineups.md) | Current Team Rocket member lineups. |
 | **`event-links`** | `object` | [event-links.md](event-links.md) | Map of event IDs to LeekDuck URLs. |

@@ -95,7 +95,7 @@ Rarity is expressed both as a number (`rarity`) and a human-readable string (`ra
 - **Adventure Sync**: Some Pokemon are exclusive to Adventure Sync reward eggs (50km weekly reward). These are marked with `isAdventureSync: true`.
 - **Gift Eggs (7km)**: Most 7km eggs come from opening Gifts from friends. These often contain regional Pokemon and baby Pokemon.
 - **Regional Exclusives**: Pokemon with `isRegional: true` are typically only available in specific geographic regions, though they may appear in 7km eggs globally during events.
-- **Strange Eggs (12km)**: Obtained by defeating Team GO Rocket Leaders. These eggs contain Dark and Poison-type Pokemon.
+- **Strange Eggs (12km)**: Obtained by defeating Team Rocket Leaders. These eggs contain Dark and Poison-type Pokemon.
 
 ---
 
@@ -132,7 +132,7 @@ Rarity is expressed both as a number (`rarity`) and a human-readable string (`ra
 - **Incubator Use**: Priority for Super Incubators
 
 ### 12 km Eggs (Strange Eggs)
-- **Source**: Defeating Team GO Rocket Leaders (Cliff, Sierra, Arlo, Giovanni)
+- **Source**: Defeating Team Rocket Leaders (Cliff, Sierra, Arlo, Giovanni)
 - **Content**: Dark and Poison-type Pokemon, including rare species
 - **Hatch Distance**: 12 kilometers
 - **Incubator Use**: High priority for Super Incubators
