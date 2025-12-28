@@ -100,7 +100,7 @@ The root of the file is an **array** of event objects.
 | `raid-hour` | Weekly raid hours. |
 | `community-day` | Community Day events. |
 | `raid-day` | Special Raid Day events. |
-| `team-go-rocket` | Team GO Rocket takeovers. |
+| `team-go-rocket` | Team Rocket takeovers. |
 | `max-battles` | Max Battle events. |
 | `pokemon-go-tour` | Major GO Tour events. |
 | `research` | Masterwork or paid research. |

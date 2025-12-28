@@ -1,10 +1,10 @@
-# Team GO Rocket Lineups Data - rocketLineups.min.json
+# Team Rocket Lineups Data - rocketLineups.min.json
 
-This file contains an array of Team GO Rocket member battle lineups, including Grunts, Leaders (Cliff, Sierra, Arlo), and Giovanni. Data is automatically scraped and updated.
+This file contains an array of Team Rocket member battle lineups, including Grunts, Leaders (Cliff, Sierra, Arlo), and Giovanni. Data is automatically scraped and updated.
 
 ## Overview
 
-The `rocketLineups.min.json` file provides comprehensive information about Team GO Rocket battles, including each member's possible Pokemon lineup across all three battle slots, Shadow Pokemon that can be caught, and shiny availability.
+The `rocketLineups.min.json` file provides comprehensive information about Team Rocket battles, including each member's possible Pokemon lineup across all three battle slots, Shadow Pokemon that can be caught, and shiny availability.
 
 ## Endpoints
 
@@ -15,7 +15,7 @@ The `rocketLineups.min.json` file provides comprehensive information about Team 
 
 ## Data Structure
 
-The root of the file is an **array** of Team GO Rocket member objects.
+The root of the file is an **array** of Team Rocket member objects.
 
 ```json
 [
@@ -32,7 +32,7 @@ The root of the file is an **array** of Team GO Rocket member objects.
 ```json
 {
     "name": "Cliff",
-    "title": "Team GO Rocket Leader",
+    "title": "Team Rocket Leader",
     "type": "",
     "gender": "Male",
     "firstPokemon": [
@@ -78,7 +78,7 @@ The root of the file is an **array** of Team GO Rocket member objects.
 
 | Field               | Type      | Description
 |-------------------- |---------- |---------------------
-| **`name`**          | `string`  | The name of the Team GO Rocket member.
+| **`name`**          | `string`  | The name of the Team Rocket member.
 | **`title`**         | `string`  | The rank or title of the member. See [Rocket Titles](#rocket-titles).
 | **`type`**          | `string`  | The type specialty of the member (e.g., "fire", "water"). Empty for Leaders/Boss.
 | **`gender`**        | `string`  | The gender of the member ("Male" or "Female").
@@ -90,9 +90,9 @@ The root of the file is an **array** of Team GO Rocket member objects.
 
 Observed titles include:
 
-- `Team GO Rocket Boss`
-- `Team GO Rocket Leader`
-- `Team GO Rocket Grunt`
+- `Team Rocket Boss`
+- `Team Rocket Leader`
+- `Team Rocket Grunt`
 
 ## Pokemon Object
 
@@ -109,7 +109,7 @@ Observed titles include:
 ## Usage Notes
 
 - **Data Updates**: This file is automatically updated via web scraper. Leader lineups change every few months, while Giovanni's lineup changes with special research releases.
-- **Battle Mechanics**: Team GO Rocket members use Shadow Pokemon with boosted attack but reduced defense.
+- **Battle Mechanics**: Team Rocket members use Shadow Pokemon with boosted attack but reduced defense.
 - **Lineup Randomization**: Each slot may have multiple possible Pokemon. The actual Pokemon used is randomly selected at battle start.
 - **Encounter Rewards**: Only Pokemon with `isEncounter: true` can be caught after victory. This is typically the first Pokemon in the lineup, except for Leaders/Giovanni where it's usually the first slot.
 - **Shiny Shadow Pokemon**: Some Shadow Pokemon can be shiny. These are extremely rare and highly sought after.
@@ -117,7 +117,7 @@ Observed titles include:
 
 ---
 
-## Team GO Rocket Structure
+## Team Rocket Structure
 
 ### Grunts
 - **Encounters**: Found at invaded PokéStops (black)
@@ -146,7 +146,7 @@ Observed titles include:
 
 ### Shadow Pokemon Stats
 
-Shadow Pokemon used by Team GO Rocket have:
+Shadow Pokemon used by Team Rocket have:
 - **+20% Attack**: Makes them hit harder
 - **-20% Defense**: Makes them take more damage
 - **Weather Boost**: Can be weather boosted like regular Pokemon
@@ -161,7 +161,7 @@ Shadow Pokemon used by Team GO Rocket have:
 
 ### Type Effectiveness
 
-Type advantages are crucial against Team GO Rocket:
+Type advantages are crucial against Team Rocket:
 - Super effective moves deal 1.6× damage
 - Not very effective moves deal 0.625× damage
 - Double weaknesses can make battles much easier
@@ -194,8 +194,8 @@ Grunts often announce their type specialty with dialogue clues:
 ```javascript
 const lineups = await fetch('https://cdn.jsdelivr.net/gh/quantNebula/data@master/rocketLineups.min.json').then(r => r.json());
 
-const leaders = lineups.filter(r => r.title === 'Team GO Rocket Leader');
-const giovanni = lineups.find(r => r.title === 'Team GO Rocket Boss');
+const leaders = lineups.filter(r => r.title === 'Team Rocket Leader');
+const giovanni = lineups.find(r => r.title === 'Team Rocket Boss');
 
 console.log('Current Leaders:', leaders.map(l => l.name).join(', '));
 ```
@@ -274,7 +274,7 @@ const typeCounters = {
 ### Finding Grunts by Type
 
 ```javascript
-const grunts = lineups.filter(r => r.title === 'Team GO Rocket Grunt');
+const grunts = lineups.filter(r => r.title === 'Team Rocket Grunt');
 
 // Group by type specialty
 const gruntsByType = {};

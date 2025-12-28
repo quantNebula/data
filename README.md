@@ -1,6 +1,6 @@
 # Pokemon GO Data - JSON Files Documentation
 
-This repository contains Pokemon GO game data in JSON format. Data is automatically scraped and updated, including current events, raid bosses, field research tasks, egg hatches, and Team GO Rocket lineups.
+This repository contains Pokemon GO game data in JSON format. Data is automatically scraped and updated, including current events, raid bosses, field research tasks, egg hatches, and Team Rocket lineups.
 
 ## Files
 
@@ -11,7 +11,7 @@ This repository contains Pokemon GO game data in JSON format. Data is automatica
 | `raids.min.json` | Raid bosses only |
 | `research.min.json` | Field research tasks only |
 | `eggs.min.json` | Egg hatches only |
-| `rocketLineups.min.json` | Team GO Rocket lineups only |
+| `rocketLineups.min.json` | Team Rocket lineups only |
 
 ## CDN Links
 
@@ -105,7 +105,7 @@ Array of event objects representing current and upcoming Pokemon GO events.
 | `raid-hour` | Weekly raid hours. |
 | `community-day` | Community Day events. |
 | `raid-day` | Special Raid Day events. |
-| `team-go-rocket` | Team GO Rocket takeovers. |
+| `team-go-rocket` | Team Rocket takeovers. |
 | `max-battles` | Max Battle events. |
 | `pokemon-go-tour` | Major GO Tour events. |
 | `research` | Masterwork or paid research. |
@@ -509,7 +509,7 @@ Array of Pokémon objects representing all Pokémon currently available from egg
 | `5 km` | 5 kilometer eggs. |
 | `7 km` | 7 kilometer eggs (from Gifts). |
 | `10 km` | 10 kilometer eggs. |
-| `12 km` | 12 kilometer "Strange" eggs (from Team GO Rocket). |
+| `12 km` | 12 kilometer "Strange" eggs (from Team Rocket). |
 
 #### Rarity Tiers
 
@@ -525,14 +525,14 @@ Array of Pokémon objects representing all Pokémon currently available from egg
 
 ### rocketLineups.min.json
 
-Array of Team GO Rocket member objects representing battle lineups for Grunts, Leaders, and Giovanni.
+Array of Team Rocket member objects representing battle lineups for Grunts, Leaders, and Giovanni.
 
 #### Example Rocket Lineup Object
 
 ```json
 {
   "name": "Cliff",
-  "title": "Team GO Rocket Leader",
+  "title": "Team Rocket Leader",
   "type": "",
   "gender": "Male",
   "firstPokemon": [
@@ -569,7 +569,7 @@ Array of Team GO Rocket member objects representing battle lineups for Grunts, L
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `name` | `string` | The name of the Team GO Rocket member. |
+| `name` | `string` | The name of the Team Rocket member. |
 | `title` | `string` | The rank or title of the member. |
 | `type` | `string` | The type specialty of the member (e.g., "fire", "water"). Empty for Leaders/Boss. |
 | `gender` | `string` | The gender of the member (`"Male"` or `"Female"`). |
@@ -581,9 +581,9 @@ Array of Team GO Rocket member objects representing battle lineups for Grunts, L
 
 | Title | Description |
 |-------|-------------|
-| `Team GO Rocket Boss` | Giovanni. |
-| `Team GO Rocket Leader` | Cliff, Sierra, or Arlo. |
-| `Team GO Rocket Grunt` | Type-themed grunts. |
+| `Team Rocket Boss` | Giovanni. |
+| `Team Rocket Leader` | Cliff, Sierra, or Arlo. |
+| `Team Rocket Grunt` | Type-themed grunts. |
 
 #### Pokemon Object (in lineup arrays)
 
