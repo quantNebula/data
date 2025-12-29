@@ -14,6 +14,8 @@
     "eventType": "event",
     "heading": "Event",
     "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-12-27-winter-weekend-2025/winter-weekend-eevee.jpg",
+    "imageWidth": 1920,
+    "imageHeight": 1080,
     "start": "2025-12-27T10:00:00.000",
     "end": "2025-12-28T20:00:00.000",
     "timezone": "Local Time",
@@ -22,7 +24,9 @@
             "bonuses": [
                 {
                     "text": "There's no daily limit for how many GO Points you can earn!",
-                    "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                    "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png",
+                    "imageWidth": 128,
+                    "imageHeight": 128
                 }
             ],
             "features": [],
@@ -58,6 +62,8 @@
 | **`eventType`** | `string` | The type of the event. This determines the structure of `extraData`. See [List of Event Types](#list-of-event-types).
 | **`heading`**   | `string` | The display heading for the event.
 | **`image`**     | `string` | URL to the header/thumbnail image for the event.
+| **`imageWidth`**| `number` | Width of the event image in pixels (null if unavailable).
+| **`imageHeight`**| `number` | Height of the event image in pixels (null if unavailable).
 | **`start`**     | `string` | The start date of the event in ISO 8601 format. See [Note for Start/End dates](#note-for-startend-dates).
 | **`end`**       | `string` | The end date of the event in ISO 8601 format. See [Note for Start/End dates](#note-for-startend-dates).
 | **`timezone`**  | `string` | The timezone context (e.g., "Local Time").
@@ -89,6 +95,15 @@
 The `start` and `end` fields are DateTime objects encoded in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
 
 Most events in Pokémon GO occur based around a user's local timezone. The `timezone` field typically indicates "Local Time". If the event happens at a specific global time, the ISO string may end in `Z` (UTC), though typically the scraper provides the raw string from the source.
+
+## Image Dimensions
+
+All image fields in the API now include companion `imageWidth` and `imageHeight` fields that contain the actual pixel dimensions of the image:
+- Pokemon sprites: `image`, `imageWidth`, `imageHeight`
+- Bonus items: `image`, `imageWidth`, `imageHeight` 
+- Rewards: `image`, `imageWidth`, `imageHeight`
+
+These dimensions are fetched from the actual image files and will be `null` if the dimensions cannot be determined.
 
 ## Extra Data
 

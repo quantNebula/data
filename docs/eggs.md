@@ -13,6 +13,8 @@
     "eggType": "1 km",
     "isAdventureSync": false,
     "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm1.icon.png",
+    "imageWidth": 120,
+    "imageHeight": 120,
     "canBeShiny": true,
     "combatPower": {
         "min": 637,
@@ -33,6 +35,8 @@
 | **`eggType`**       | `string`  | The distance required to hatch the egg. See [Egg Types](#egg-types).
 | **`isAdventureSync`**| `boolean` | Indicates if this egg is obtained specifically through Adventure Sync rewards.
 | **`image`**         | `string`  | URL to the Pokémon's icon image.
+| **`imageWidth`**    | `number`  | Width of the image in pixels (null if unavailable).
+| **`imageHeight`**   | `number`  | Height of the image in pixels (null if unavailable).
 | **`canBeShiny`**    | `boolean` | Indicates if the Pokémon can be encountered in its shiny form from this egg.
 | **`combatPower`**   | `object`  | An object containing the CP range for the hatched Pokémon (`min` and `max`).
 | **`isRegional`**    | `boolean` | Indicates if this Pokémon is exclusive to a specific region.

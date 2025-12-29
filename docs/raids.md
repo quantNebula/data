@@ -15,11 +15,15 @@
     "types": [
         {
             "name": "ice",
-            "image": "https://leekduck.com/assets/img/types/ice.png"
+            "image": "https://leekduck.com/assets/img/types/ice.png",
+            "imageWidth": 96,
+            "imageHeight": 96
         },
         {
             "name": "steel",
-            "image": "https://leekduck.com/assets/img/types/steel.png"
+            "image": "https://leekduck.com/assets/img/types/steel.png",
+            "imageWidth": 96,
+            "imageHeight": 96
         }
     ],
     "combatPower": {
@@ -35,10 +39,14 @@
     "boostedWeather": [
         {
             "name": "snow",
-            "image": "https://leekduck.com/assets/img/weather/snowy.png"
+            "image": "https://leekduck.com/assets/img/weather/snowy.png",
+            "imageWidth": 128,
+            "imageHeight": 128
         }
     ],
-    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm27.fALOLA.icon.png"
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm27.fALOLA.icon.png",
+    "imageWidth": 120,
+    "imageHeight": 120
 }
 ```
 
@@ -53,6 +61,8 @@
 | **`combatPower`**   | `object`  | Details about the Catch CP range. See [Combat Power Object](#combat-power-object).
 | **`boostedWeather`**| `array`   | An array of objects representing the weather conditions that boost this boss.
 | **`image`**         | `string`  | URL to the Pokémon's icon image.
+| **`imageWidth`**    | `number`  | Width of the boss image in pixels (null if unavailable).
+| **`imageHeight`**   | `number`  | Height of the boss image in pixels (null if unavailable).
 
 ## Raid Tiers
 
@@ -70,6 +80,8 @@ The `tier` field identifies the difficulty or category of the raid. Observed val
 |---|---|---|
 | **`name`** | `string` | The name of the type (e.g., "ice", "fire", "steel"). |
 | **`image`** | `string` | URL to the type icon image. |
+| **`imageWidth`** | `number` | Width of the type icon in pixels (null if unavailable). |
+| **`imageHeight`** | `number` | Height of the type icon in pixels (null if unavailable). |
 
 ### Combat Power Object
 | Field | Type | Description |
@@ -82,3 +94,5 @@ The `tier` field identifies the difficulty or category of the raid. Observed val
 |---|---|---|
 | **`name`** | `string` | The name of the weather condition (e.g., "snow", "partly cloudy", "windy"). |
 | **`image`** | `string` | URL to the weather icon image. |
+| **`imageWidth`** | `number` | Width of the weather icon in pixels (null if unavailable). |
+| **`imageHeight`** | `number` | Height of the weather icon in pixels (null if unavailable). |
