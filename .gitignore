@@ -1,64 +1,28 @@
-# macOS system files
+## macOS system artifacts
+## macOS system artifacts
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
+## Finder and resource metadata
+Icon?
+.VolumeIcon.icns
+._*
+.#*    # hidden files created by Finder
 
+## Spotlight, Trash, and temporary directories
+.Spotlight-V100
+.Trashes
+.TemporaryItems
+.fseventsd
+.DocumentRevisions-V100
+.apdisk
+.Network Trash Folder
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*.quarantine# macOS quarantine files*.crash# macOS crash reports*.log# macOS system logs*.lock# macOS user settings.CFUserTextEncoding# macOS cache files.com.apple.timemachine.donotpresent# macOS Time Machine files.VolumeIcon.icns# macOS volume info.Network Trash Folder# macOS network stores.apdisk.TemporaryItems# macOS temporary files*.DS_Store# macOS Finder tags*.qlgenerator# macOS Quick Look files._*# macOS resource fork files.LSOverride*.AppleDouble# macOS metadata files.Trashes.Spotlight-V100._*.DS_Store?.DS_Store# macOS folder attributes.Trashes.Spotlight-V100# Files that might appear on external disk._*# Thumbnails
+## Miscellaneous macOS caches and settings
+.CFUserTextEncoding
+.com.apple.timemachine.donotpresent
+*.log
+*.crash
+*.lock
+*.quarantine
