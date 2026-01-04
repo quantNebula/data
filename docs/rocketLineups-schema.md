@@ -218,10 +218,34 @@ Understanding encounter availability:
 - Water-type Male Grunt: Both first AND second slot Magikarp have `isEncounter: true`
 After defeating the grunt, the game determines which encountered Pokémon becomes available for capture.
 ### Shiny Availability
-The `canBeShiny` field indicates shiny potential:
-- `true`: This Shadow Pokémon can be shiny (approximately 1/64 odds)
+The `canBeShiny` field indicates shiny potential for Shadow Pokémon:
+- `true`: This Shadow Pokémon can be shiny (approximately 1/64 odds per encounter)
 - `false`: Shiny form not available for Shadow version, or temporarily disabled
-Note that even first-slot Pokémon may have `canBeShiny: false` if Niantic hasn't released that shiny form.
+
+**Shadow Shiny Mechanics**:
+
+**Encounter Odds**: Shadow Pokémon that can be shiny have approximately **1/64 odds** (~1.56% chance), which is significantly better than wild encounter rates (~1/500) but lower than Community Day rates (~1/25).
+
+**Guaranteed Catch**: Once you defeat a Rocket member, the encounter Pokémon cannot flee, allowing unlimited catch attempts. This is particularly valuable for shiny Shadow Pokémon.
+
+**Availability Limitations**:
+- Not all Shadow Pokémon have their shiny forms released
+- Even if the regular form has a shiny variant, the Shadow version may not
+- Shiny availability can be temporarily disabled and later re-enabled
+- First-slot Pokémon may have `canBeShiny: false` even though they're the catchable encounter
+
+**Shadow vs. Regular Shinies**:
+- Shadow and regular forms are separate shiny checks (separate Pokédex entries)
+- A Shadow shiny remains Shadow even after purification (becomes Purified shiny)
+- Purifying a shiny Shadow gives it a unique "Purified" tag but removes the Shadow bonus
+- Shadow shinies can be traded (both Pokémon must be registered in both players' Pokédex)
+
+**Strategic Considerations**:
+- Shadow shinies are highly valued by collectors
+- Purification is permanent - many collectors keep Shadow shinies unpurified
+- The Shadow bonus (+20% attack, -20% defense) makes them valuable for raids
+
+**Cross-Reference**: For complete shiny information including release dates, reference `shiny.min.json`. Note that Shadow variants are tracked separately from their regular counterparts.
 ## Usage Examples
 ### Finding Giovanni's Lineup
 ```javascript

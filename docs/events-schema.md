@@ -472,6 +472,31 @@ When `extraData` is populated, it contains event-specific information such as:
   }
 }
 ```
+
+### Shiny Releases in Events
+Many events feature shiny Pokémon releases and increased shiny rates:
+
+**New Shiny Debuts**: Events often introduce shiny forms for Pokémon that previously didn't have them available. The `extraData` may list newly released shinies.
+
+**Increased Shiny Rates**: During certain events (especially Community Days), featured Pokémon have significantly boosted shiny encounter rates:
+- **Community Day**: ~1/25 odds for featured Pokémon (compared to ~1/500 standard)
+- **Raid Day**: ~1/10 odds for featured raid bosses
+- **General Events**: May feature boosted rates for specific spawns
+
+**Shiny Data in extraData**:
+```javascript
+// Community Day shinies (evolution line)
+"shinies": [
+  {"name": "Piplup", "image": "..._shiny.png", "canBeShiny": true},
+  {"name": "Prinplup", "image": "..._shiny.png", "canBeShiny": true},
+  {"name": "Empoleon", "image": "..._shiny.png", "canBeShiny": true}
+]
+
+// Raid event shinies
+"shinies": ["Genesect", "Blacephalon"]  // May be simple string array
+```
+
+**Cross-Reference with Shiny Data**: For complete shiny availability, cross-reference event data with `shiny.min.json` which contains the authoritative list of all released shiny forms with their release dates.
 ### Safe Access Pattern
 **Always check for null** when accessing extraData:
 ```javascript

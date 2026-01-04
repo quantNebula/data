@@ -168,6 +168,32 @@ The file contains a JSON object with two main sections: seasonal information and
 | `canBeShiny` | boolean | Whether Pokémon can be shiny (encounters only). `false` indicates the shiny variant is not yet released in the game |
 | `combatPower` | object | CP range for encounters at level 15 (standard research encounter level). Actual CP may vary based on trainer level and weather boost |
 | `quantity` | integer | Item quantity (items only) |
+
+### Shiny Encounters from Research
+Field Research encounters can yield shiny Pokémon with the following mechanics:
+
+**Shiny Eligibility**: The `canBeShiny` flag indicates whether a specific encounter reward can be shiny:
+- `true`: Shiny form is available (standard ~1/500 odds for most species)
+- `false`: Shiny form either not released yet or not available through this specific encounter
+
+**Odds and Rates**:
+- Most research encounter shinies follow standard wild encounter rates (~1/500)
+- Some featured event research may have boosted rates
+- Legendary Pokémon from Research Breakthrough historically had higher rates (~1/20)
+
+**Research Breakthrough Shinies**:
+The `seasonalInfo.breakthroughPokemon` lists Pokémon available from completing 7 days of research. These encounters:
+- Are typically shiny-eligible (check `canBeShiny` in encounter data)
+- Often feature legendary or mythical Pokémon
+- May rotate monthly or per season
+- Have guaranteed minimum IVs (10/10/10)
+
+**Special Cases**:
+- **Spinda**: Each pattern number is a separate shiny check. Current patterns listed in `seasonalInfo.spindaPatterns`
+- **Legendary Encounters**: Research Breakthrough legendaries historically have boosted shiny rates
+- **Event-Exclusive Research**: Special or Timed Research during events may feature boosted shiny rates for specific encounters
+
+**Cross-Reference**: For comprehensive shiny availability and release dates, reference `shiny.min.json` which catalogs all released shiny forms in the game.
 ## Understanding Rewards
 ### Reward Structure: Random Selection vs. Guaranteed Bundles
 The rewards array can represent different scenarios:
