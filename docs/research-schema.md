@@ -1,21 +1,13 @@
 # Pokémon GO Field Research Data Schema
-
 ## Overview
-
 The `research.min.json` file contains data about current Field Research tasks in Pokémon GO. This dataset describes available research tasks, their requirements, and possible rewards including Pokémon encounters, items, and Stardust.
-
 **Note:** Field Research tasks change frequently with events and monthly rotations. This documentation focuses on the data structure rather than specific current contents.
-
 ## Data Access
-
 The data is available via CDN:
-
 ```
 https://cdn.jsdelivr.net/gh/quantNebula/data@master/research.min.json
 ```
-
 ### Usage Example
-
 ```javascript
 // Fetch the data
 fetch('https://cdn.jsdelivr.net/gh/quantNebula/data@master/research.min.json')
@@ -24,11 +16,8 @@ fetch('https://cdn.jsdelivr.net/gh/quantNebula/data@master/research.min.json')
     console.log(`Loaded ${data.tasks.length} field research tasks`);
   });
 ```
-
 ## File Structure
-
 The file contains a JSON object with two main sections: seasonal information and an array of research tasks.
-
 ```json
 {
   "seasonalInfo": {
@@ -45,9 +34,7 @@ The file contains a JSON object with two main sections: seasonal information and
   ]
 }
 ```
-
 ## JSON Schema
-
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -147,27 +134,20 @@ The file contains a JSON object with two main sections: seasonal information and
   }
 }
 ```
-
 ## Property Definitions
-
 ### Seasonal Info
-
 | Property | Type | Description |
 |----------|------|-------------|
-| `breakthroughPokemon` | array | Names of Pokémon available from 7-day Research Breakthrough |
+| `breakthroughPokemon` | array | Names of Pokémon available from 7-day Research Breakthrough. Names may be abbreviated (e.g., "Galarian Mr" for "Galarian Mr. Mime") |
 | `spindaPatterns` | array | Pattern numbers for Spinda encounters this period |
-| `season` | string/null | Current game season name |
-
+| `season` | string/null | Current game season name. `null` indicates no active seasonal designation or data not currently available |
 ### Task Properties
-
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | `text` | string | Yes | The task requirement text shown to players |
-| `type` | string | No | Task category for filtering purposes |
-| `rewards` | array | Yes | Array of possible rewards (one is randomly selected) |
-
+| `type` | string | No | Task category for filtering purposes. May be omitted for special event tasks or uncategorized tasks |
+| `rewards` | array | Yes | Array of possible rewards (see reward structure details below) |
 ### Task Types
-
 - **`catch`** - Catching Pokémon (specific types, quantities, weather boost)
 - **`throw`** - Throwing Pokéballs (Nice, Great, Excellent, Curveball)
 - **`battle`** - Raids, Trainer Battles, Team GO Rocket battles
@@ -177,67 +157,110 @@ The file contains a JSON object with two main sections: seasonal information and
 - **`rocket`** - Team GO Rocket specific tasks
 - **`sponsored`** - Tasks from sponsored locations
 - **`ar`** - AR scanning tasks
-
 ### Reward Properties
-
 | Property | Type | Description |
 |----------|------|-------------|
 | `type` | string | `"encounter"` for Pokémon or `"item"` for items |
-| `name` | string | Pokémon name or item name (may include quantity prefix like "×3") |
+| `name` | string | Pokémon name (including regional forms) or item name (may include quantity prefix like "×3") |
 | `image` | string (URI) | URL to the icon image |
 | `imageWidth` | integer | Icon width in pixels |
 | `imageHeight` | integer | Icon height in pixels |
-| `canBeShiny` | boolean | Whether Pokémon can be shiny (encounters only) |
-| `combatPower` | object | CP range (encounters only) |
+| `canBeShiny` | boolean | Whether Pokémon can be shiny (encounters only). `false` indicates the shiny variant is not yet released in the game |
+| `combatPower` | object | CP range for encounters at level 15 (standard research encounter level). Actual CP may vary based on trainer level and weather boost |
 | `quantity` | integer | Item quantity (items only) |
-
 ## Understanding Rewards
-
-### Multiple Reward Possibilities
-
-Most tasks have multiple possible rewards listed. **Only one reward is given** when completing the task - the game randomly selects from the array. This is common for encounter rewards where several Pokémon share the same task.
-
+### Reward Structure: Random Selection vs. Guaranteed Bundles
+The rewards array can represent different scenarios:
+#### Random Selection (ONE Reward from List)
+When a task offers multiple Pokémon encounters or a mix of encounters and items, typically **only ONE** reward is randomly selected upon completion.
 ```javascript
-// This task can reward ANY ONE of these Pokémon
+// This task rewards ONE of these options
 {
   "text": "Make 3 Great Throws",
   "rewards": [
     {"type": "encounter", "name": "Omanyte", ...},
     {"type": "encounter", "name": "Kabuto", ...},
-    {"type": "encounter", "name": "Clamperl", ...}
+    {"type": "encounter", "name": "Clamperl", ...},
+    {"type": "item", "name": "×200", ...} // Or Stardust instead
   ]
 }
 ```
-
-### Guaranteed vs Random
-
-Some tasks offer item rewards where the exact reward is guaranteed:
-
+#### Guaranteed Bundles (ALL Items Awarded)
+Some tasks award multiple items together as a bundle. The game logic determines whether rewards are alternatives or bundles.
 ```javascript
-// You always get these specific items
+// This task may award ALL of these items together
 {
-  "text": "Catch 10 Pokémon",
+  "text": "Make 3 Great Throws in a row",
   "rewards": [
-    {"type": "item", "name": "×5", "quantity": 5, ...}, // Poké Balls
-    {"type": "item", "name": "×200", "quantity": 200, ...} // Stardust
+    {"type": "item", "name": "×10", "quantity": 10, ...}, // Poké Balls
+    {"type": "item", "name": "×5", "quantity": 5, ...},   // Ultra Balls
+    {"type": "item", "name": "×9", "quantity": 9, ...},   // Razz Berries
+    {"type": "item", "name": "×3", "quantity": 3, ...},   // Pinap Berries
+    {"type": "item", "name": "×1", "quantity": 1, ...},   // Rare Candy
+    {"type": "item", "name": "×1000", "quantity": 1000, ...} // Stardust
   ]
 }
 ```
-
+**Important:** Without game knowledge, it's difficult to determine from the data alone whether rewards are alternatives or bundles. Generally:
+- Multiple Pokémon encounters = Random selection (one awarded)
+- Mixed encounters and items = Random selection (one awarded)
+- Multiple different item types = May be a bundle (check in-game)
+### Regional Forms and Variants
+Pokémon names may include regional form designations and other variants:
+- **Regional Forms**: "Alolan Meowth", "Galarian Slowpoke", "Hisuian Growlithe", "Paldean Wooper"
+- **Gender Variants**: "Frillish (Female)"
+- **Pattern Variants**: "Spinda 6", "Spinda 7"
+```javascript
+// Example of regional form variants in same task
+{
+  "text": "Spin 5 PokéStops or Gyms",
+  "rewards": [
+    {"type": "encounter", "name": "Growlithe", ...},
+    {"type": "encounter", "name": "Hisuian Growlithe", ...},
+    {"type": "encounter", "name": "Slowpoke", ...},
+    {"type": "encounter", "name": "Galarian Slowpoke", ...}
+  ]
+}
+```
+### Special Event Tasks
+Some tasks are tied to specific events or dates and may have unique characteristics:
+- Tasks without a `type` field are often special event-related
+- Reward quantities may reflect event dates (e.g., "×2026" Stardust for New Year 2026)
+- Event tasks are temporary and rotate with game events
+```javascript
+// Special event task example
+{
+  "text": "Catch 26 Pokémon",
+  "rewards": [
+    {"type": "item", "name": "×2026", "quantity": 2026, ...} // Event-themed reward
+  ]
+}
+```
+### Spinda Patterns
+Spinda encounters include pattern numbers in the name (e.g., "Spinda 6", "Spinda 7"). The `seasonalInfo.spindaPatterns` array indicates which patterns are currently available. Spinda patterns rotate periodically.
+```javascript
+// Finding current Spinda tasks
+const spindaTasks = data.tasks.filter(task =>
+  task.rewards.some(reward =>
+    reward.name && reward.name.startsWith('Spinda')
+  )
+);
+console.log('Current Spinda patterns:', data.seasonalInfo.spindaPatterns);
+// Output: Current Spinda patterns: [6, 7]
+```
+### Research Breakthrough
+The `breakthroughPokemon` array lists Pokémon available from 7-day streak Research Breakthrough rewards, which are separate from individual task rewards.
 ## Usage Examples
-
 ### Filtering by Task Type
-
 ```javascript
 // Get all catch-related tasks
 const catchTasks = data.tasks.filter(task => task.type === 'catch');
-
 // Get all throw-related tasks
 const throwTasks = data.tasks.filter(task => task.type === 'throw');
+// Get tasks without a type (often event-specific)
+const specialTasks = data.tasks.filter(task => !task.type);
 ```
-
 ### Finding Specific Pokémon Encounters
-
 ```javascript
 // Find tasks that reward a specific Pokémon
 function findTasksForPokemon(pokemonName) {
@@ -248,12 +271,20 @@ function findTasksForPokemon(pokemonName) {
     )
   );
 }
-
 const gibleTasks = findTasksForPokemon('Gible');
+// Find tasks for any regional form
+function findTasksForPokemonFamily(baseName) {
+  return data.tasks.filter(task =>
+    task.rewards.some(reward =>
+      reward.type === 'encounter' && 
+      reward.name.includes(baseName)
+    )
+  );
+}
+const meowthTasks = findTasksForPokemonFamily('Meowth');
+// Returns tasks with Meowth, Alolan Meowth, and Galarian Meowth
 ```
-
 ### Finding Shiny-Eligible Encounters
-
 ```javascript
 // Get tasks with potential shiny encounters
 const shinyTasks = data.tasks.filter(task =>
@@ -262,10 +293,16 @@ const shinyTasks = data.tasks.filter(task =>
     reward.canBeShiny === true
   )
 );
+// Get unique shiny-capable Pokémon
+const shinyPokemon = [...new Set(
+  data.tasks.flatMap(task =>
+    task.rewards
+      .filter(r => r.type === 'encounter' && r.canBeShiny === true)
+      .map(r => r.name)
+  )
+)].sort();
 ```
-
 ### Finding Spinda Tasks
-
 ```javascript
 // Find current Spinda pattern tasks
 const spindaTasks = data.tasks.filter(task =>
@@ -273,24 +310,22 @@ const spindaTasks = data.tasks.filter(task =>
     reward.name && reward.name.startsWith('Spinda')
   )
 );
-
 console.log('Current Spinda patterns:', data.seasonalInfo.spindaPatterns);
+console.log('Spinda task:', spindaTasks[0]?.text);
 ```
-
 ### Grouping Tasks by Category
-
 ```javascript
 // Group all tasks by type
 const tasksByType = data.tasks.reduce((acc, task) => {
-  const type = task.type || 'other';
+  const type = task.type || 'event';
   if (!acc[type]) acc[type] = [];
   acc[type].push(task);
   return acc;
 }, {});
+console.log('Tasks by category:', Object.keys(tasksByType));
+console.log('Number of catch tasks:', tasksByType.catch?.length || 0);
 ```
-
 ### Extracting All Encounter Rewards
-
 ```javascript
 // Get unique list of all Pokémon available from research
 const allPokemon = [...new Set(
@@ -299,36 +334,50 @@ const allPokemon = [...new Set(
       .filter(r => r.type === 'encounter')
       .map(r => r.name)
   )
-)];
+)].sort();
+console.log(`${allPokemon.length} unique Pokémon available from field research`);
 ```
-
-## Special Cases
-
-### Reward Arrays
-
-Tasks can have multiple rewards in different patterns:
-
-1. **Multiple possible encounters** (random selection) - Several Pokémon, one is chosen
-2. **Encounter + Items** - Mix of Pokémon and items as alternatives
-3. **Multiple items** - Stack of different items, all awarded together
-4. **Single reward** - Only one option available
-
-### Item Name Format
-
-Item rewards may have quantity in the `name` field (e.g., "×200", "×5") in addition to the `quantity` property. Both should be used for complete information.
-
-### Spinda Patterns
-
-Spinda encounters include pattern numbers in the name (e.g., "Spinda 6", "Spinda 7"). The `seasonalInfo.spindaPatterns` array indicates which patterns are currently available.
-
-### Research Breakthrough
-
-The `breakthroughPokemon` array lists Pokémon available from 7-day streak Research Breakthrough rewards, which are separate from individual task rewards.
-
+### Finding High-Value Rewards
+```javascript
+// Find tasks offering Rare Candy
+const rareCandyTasks = data.tasks.filter(task =>
+  task.rewards.some(reward =>
+    reward.type === 'item' && 
+    reward.name && reward.image.includes('Rare%20Candy')
+  )
+);
+// Find tasks offering rare Pokémon (pseudo-legendary starters)
+const rarePokemon = ['Larvitar', 'Beldum', 'Gible', 'Axew', 'Jangmo-o'];
+const rarePokemonTasks = data.tasks.filter(task =>
+  task.rewards.some(reward =>
+    reward.type === 'encounter' && 
+    rarePokemon.includes(reward.name)
+  )
+);
+```
+### Analyzing Reward Complexity
+```javascript
+// Find tasks with multiple encounter options
+const multiEncounterTasks = data.tasks.filter(task => {
+  const encounters = task.rewards.filter(r => r.type === 'encounter');
+  return encounters.length > 1;
+});
+// Find tasks with item bundles
+const itemBundleTasks = data.tasks.filter(task => {
+  const items = task.rewards.filter(r => r.type === 'item');
+  return items.length > 3; // Likely a bundle if 4+ items
+});
+```
 ## Important Notes
-
-- **Data volatility**: Field Research tasks rotate monthly and change during events. Data represents current availability.
-- **Random rewards**: When multiple rewards exist for a task, only one is randomly awarded upon completion.
-- **Stacking**: Some tasks appear to list multiple items - these may all be awarded together, or be separate possible outcomes depending on the task.
-- **CP values**: Combat Power ranges for encounters are based on trainer level and may vary.
+- **Data volatility**: Field Research tasks rotate monthly and change during events. The data represents current availability and may change without notice.
+- **Random rewards**: When multiple rewards exist for a task, the game determines whether one is randomly selected or all are awarded. This logic is not encoded in the data.
+- **CP values**: Combat Power ranges represent level 15 encounters (standard research level). Actual CP varies by trainer level and weather conditions.
 - **Task removal**: Tasks can be discarded and replaced by spinning PokéStops until the desired task is found.
+- **Shiny availability**: `canBeShiny: false` indicates the shiny variant hasn't been released in the game yet, not that you caught it already.
+- **Regional forms**: Pay attention to form designations (Alolan, Galarian, Hisuian, Paldean) as they are distinct Pokémon with different stats and types.
+- **Event tasks**: Tasks without a `type` field or with unusual reward quantities are often tied to limited-time events.
+## Data Quality Considerations
+- **Name abbreviations**: Pokémon names in `breakthroughPokemon` may be abbreviated (e.g., "Galarian Mr" instead of "Galarian Mr. Mime")
+- **Missing types**: Not all tasks include a `type` field, particularly event-specific tasks
+- **Reward interpretation**: Without additional game context, determining whether multiple item rewards are alternatives or bundles requires observation
+- **Image URLs**: All image URLs point to external CDN resources which may change independently of this data
