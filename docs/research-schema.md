@@ -112,6 +112,11 @@ The file contains a JSON object with two main sections: seasonal information and
                   "type": "boolean",
                   "description": "Whether this Pokémon can be shiny (encounters only)"
                 },
+                "shinyAssetUrl": {
+                  "type": ["string", "null"],
+                  "format": "uri",
+                  "description": "URL to the shiny variant icon image (encounters only). null if shiny form is not available or not yet released"
+                },
                 "combatPower": {
                   "type": "object",
                   "description": "CP range for encounter rewards",
@@ -166,6 +171,7 @@ The file contains a JSON object with two main sections: seasonal information and
 | `imageWidth` | integer | Icon width in pixels |
 | `imageHeight` | integer | Icon height in pixels |
 | `canBeShiny` | boolean | Whether Pokémon can be shiny (encounters only). `false` indicates the shiny variant is not yet released in the game |
+| `shinyAssetUrl` | string/null | URL to the shiny variant icon image (encounters only). `null` if shiny form is not available or not yet released |
 | `combatPower` | object | CP range for encounters at level 15 (standard research encounter level). Actual CP may vary based on trainer level and weather boost |
 | `quantity` | integer | Item quantity (items only) |
 
