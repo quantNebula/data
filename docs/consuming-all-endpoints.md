@@ -605,16 +605,6 @@ interface Event {
 4. **Consider lazy loading**: Load individual endpoints only when needed
 5. **Use HTTP/2**: Most modern browsers support it for better performance
 
-## Additional Resources
-
-For detailed schema information for each endpoint, see:
-- [Events Schema](./events.md)
-- [Raids Schema](./raids.md)
-- [Eggs Schema](./eggs.md)
-- [Research Schema](./research.md)
-- [Shiny Schema](./shiny.md)
-- [Rocket Lineups Schema](./rocketLineups.md)
-
 ## Support and Updates
 
 This data is maintained by the community. For issues or questions:
