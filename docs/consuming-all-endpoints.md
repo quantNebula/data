@@ -604,12 +604,3 @@ interface Event {
 3. **Filter data client-side**: All endpoints return complete datasets; filter for your needs
 4. **Consider lazy loading**: Load individual endpoints only when needed
 5. **Use HTTP/2**: Most modern browsers support it for better performance
-
-## Support and Updates
-
-This data is maintained by the community. For issues or questions:
-- Check the [GitHub repository](https://github.com/quantNebula/data)
-- Open an issue for data discrepancies
-- Submit pull requests for documentation improvements
-
-Data is typically updated within hours of official announcements from Niantic.
