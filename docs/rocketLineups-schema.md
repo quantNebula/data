@@ -135,11 +135,6 @@ The file contains a JSON array of lineup objects, each representing a different 
         "canBeShiny": {
           "type": "boolean",
           "description": "Whether this Pokémon can be encountered in shiny form"
-        },
-        "shinyAssetUrl": {
-          "type": ["string", "null"],
-          "format": "uri",
-          "description": "URL to the shiny variant icon image. null if shiny form is not available or not yet released for Shadow versions"
         }
       }
     }
@@ -170,7 +165,6 @@ The file contains a JSON array of lineup objects, each representing a different 
 | `types` | array | Pokémon types (e.g., ["fire", "flying"], ["dragon"]) |
 | `isEncounter` | boolean | If `true`, this Pokémon can be caught after winning. The catchable Pokémon depends on which slot it occupies during battle |
 | `canBeShiny` | boolean | If `true`, the encounter can potentially be shiny. `false` means shiny form not released for Shadow versions or temporarily unavailable |
-| `shinyAssetUrl` | string/null | URL to the shiny variant icon image. `null` if shiny form is not available or not yet released for Shadow versions |
 ## Understanding Lineups
 ### Battle Structure
 Each Rocket member has three Pokémon slots. The battle mechanics work as follows:

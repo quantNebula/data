@@ -28,7 +28,6 @@ The file contains a JSON array of Pokémon objects, where each object represents
     "imageWidth": 107,
     "imageHeight": 126,
     "canBeShiny": true,
-    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_001_00_shiny.png",
     "combatPower": {
       "min": 637,
       "max": 637
@@ -96,11 +95,6 @@ The file contains a JSON array of Pokémon objects, where each object represents
         "type": "boolean",
         "description": "Whether this Pokémon can be encountered in its shiny form when hatched"
       },
-      "shinyAssetUrl": {
-        "type": ["string", "null"],
-        "format": "uri",
-        "description": "URL to the shiny variant icon image. null if shiny form is not available or not yet released"
-      },
       "combatPower": {
         "type": "object",
         "description": "The Combat Power (CP) for this Pokémon when hatched",
@@ -152,7 +146,6 @@ The file contains a JSON array of Pokémon objects, where each object represents
 | `imageWidth` | integer | Yes | Width of the icon image in pixels |
 | `imageHeight` | integer | Yes | Height of the icon image in pixels |
 | `canBeShiny` | boolean | Yes | Whether this Pokémon can be shiny when hatched. `false` means shiny form not yet released |
-| `shinyAssetUrl` | string/null | Yes | URL to the shiny variant icon image. `null` if shiny form is not available or not yet released |
 | `combatPower` | object | Yes | CP value for the hatched Pokémon (min and max are always identical) |
 | `isRegional` | boolean | Yes | Whether this Pokémon is normally region-locked in wild encounters |
 | `isGiftExchange` | boolean | Yes | For 7 km eggs only: `true` means ONLY from gift eggs, `false` means available in general 7 km pool |
