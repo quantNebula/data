@@ -339,12 +339,12 @@ Events of this type typically do not contain additional structured data in `extr
 | `raidday.bonuses[].imageWidth` | integer | 1/3 | Array item (Optional) |
 | `raidday.bonuses[].text` | string | 1/3 | Array item (Optional) |
 | `raidday.featured` | array | 1/3 | Featured Pokémon (Optional) |
-| `raidday.featuredAttacks` | array | 1/3 | Optional |
 | `raidday.featured[].canBeShiny` | boolean | 1/3 | Array item (Optional) |
 | `raidday.featured[].image` | string | 1/3 | Array item (Optional) |
 | `raidday.featured[].imageHeight` | integer | 1/3 | Array item (Optional) |
 | `raidday.featured[].imageWidth` | integer | 1/3 | Array item (Optional) |
 | `raidday.featured[].name` | string | 1/3 | Array item (Optional) |
+| `raidday.featuredAttacks` | array | 1/3 | Optional |
 | `raidday.raids` | object | 1/3 | Game content section (Optional) |
 | `raidday.raids.fiveStar` | array | 1/3 | Optional |
 | `raidday.raids.mega` | array | 1/3 | Optional |
