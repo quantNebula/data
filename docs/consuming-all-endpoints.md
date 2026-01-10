@@ -3,6 +3,8 @@
 ## Overview
 This guide explains how to consume all available data endpoints simultaneously and understand the relationships between different data sources. By combining these endpoints, you can build comprehensive applications that provide a complete view of the current Pokémon GO game state.
 
+> **Note:** All data is available as **both individual endpoint files AND a combined aggregated file**. The `combined.min.json` file is automatically generated from the individual files and validated to ensure all data sources are included. See [Combined File Architecture](combined-architecture.md) for technical details.
+
 ## Available Endpoints
 
 All data is available via CDN at `https://cdn.jsdelivr.net/gh/quantNebula/data@master/{filename}`:
@@ -15,11 +17,17 @@ All data is available via CDN at `https://cdn.jsdelivr.net/gh/quantNebula/data@m
 | `research.min.json` | Field research tasks and rewards | Monthly + event updates |
 | `shiny.min.json` | Shiny Pokémon availability and release dates | As new shinies are released |
 | `rocketLineups.min.json` | Team GO Rocket leader lineups | Monthly updates |
-| `combined.min.json` | All endpoints combined into one object | Real-time (same as individual files) |
+| `combined.min.json` | **All endpoints combined into one validated object** | Real-time (same as individual files) |
 
-## Using the Combined Endpoint
+## Two Ways to Consume the Data
 
-The easiest way to consume all data simultaneously is using the `combined.min.json` endpoint:
+You can consume the data in two ways:
+1. **Combined Endpoint** - Single file with all data (recommended for most use cases)
+2. **Individual Endpoints** - Separate files for each data type (better for targeted updates)
+
+### Option 1: Using the Combined Endpoint (Recommended)
+
+The easiest and most reliable way to consume all data simultaneously is using the `combined.min.json` endpoint. This file is **automatically generated from the individual files** and **validated** to ensure all data sources are present.
 
 ```javascript
 // Fetch all data at once
@@ -35,24 +43,43 @@ fetch('https://cdn.jsdelivr.net/gh/quantNebula/data@master/combined.min.json')
   });
 ```
 
-**Structure of combined.min.json:**
+### Guaranteed Structure
+
+The `combined.min.json` file **always includes all required data sources**:
+
 ```json
 {
-  "events": [...],
-  "raids": [...],
-  "eggs": [...],
-  "research": {
+  "events": [...],           // Always present
+  "raids": [...],            // Always present
+  "eggs": [...],             // Always present
+  "research": {              // Always present
     "seasonalInfo": {...},
     "tasks": [...]
   },
-  "shiny": [...],
-  "rocketLineups": [...]
+  "shiny": [...],           // Always present
+  "rocketLineups": [...]    // Always present
 }
 ```
 
-## Fetching Individual Endpoints in Parallel
+### Benefits of Using Combined Endpoint
 
-For more granular control or when you only need specific endpoints, fetch them in parallel:
+✅ **Single Request** - One fetch instead of six  
+✅ **Validated** - Automatically validated during generation  
+✅ **Comprehensive** - Guaranteed to include all data sources  
+✅ **Atomic** - All data from the same generation cycle  
+✅ **Efficient** - Reduced bandwidth and latency  
+
+### Option 2: Fetching Individual Endpoints
+
+For more granular control, when you only need specific endpoints, or when you want to update specific data independently, use the individual endpoint files.
+
+**Use individual endpoints when:**
+- You only need specific data (e.g., just events)
+- You want to cache different endpoints separately
+- You're implementing selective updates
+- You want finer control over data freshness
+
+**Fetch all individual endpoints in parallel:**
 
 ```javascript
 async function fetchAllData() {
