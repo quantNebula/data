@@ -5,7 +5,8 @@ The `events.min.json` file contains comprehensive data about ongoing and upcomin
 - **Placeholder events** - Future events with basic information and default images
 - **Fully detailed events** - Events with custom images and complete information
 - **Past events** - Recently completed events retained for historical reference
-**Critical Note:** In the current dataset, all events have `extraData: null`, indicating they are either placeholder entries or the detailed event information is stored separately. The `extraData` field is designed to contain comprehensive event details but is frequently null for future events.
+
+**Critical Note:** The `extraData` field is designed to contain comprehensive event details. Many events have `extraData: null` when they are placeholder entries or when detailed information is not yet available. Fully detailed events typically have `extraData` populated with event-specific information such as bonuses, spawns, featured Pokémon, and more.
 
 ## Data Access
 The data is available via CDN:
@@ -38,13 +39,13 @@ The file contains a JSON array of event objects. Each event has core properties 
   {
     "eventID": "january-communityday2026",
     "name": "Grookey Community Day",
-    "eventType": "community-day skeleton-loading",
+    "eventType": "community-day",
     "heading": "Community Day",
     "image": "https://cdn.leekduck.com/assets/img/events/.../image.jpg",
     "imageWidth": 1206,
     "imageHeight": 679,
-    "start": "2026-01-18T14:00:00.000",
-    "end": "2026-01-18T17:00:00.000",
+    "start": "2026-01-18T14:00:00.000Z",
+    "end": "2026-01-18T17:00:00.000Z",
     "timezone": "Local Time",
     "extraData": null
   }
@@ -85,8 +86,8 @@ The file contains a JSON array of event objects. Each event has core properties 
       },
       "eventType": {
         "type": "string",
-        "description": "Event category with ' skeleton-loading' suffix",
-        "pattern": ".+ skeleton-loading$"
+        "description": "Event category identifier",
+        "minLength": 1
       },
       "heading": {
         "type": "string",
@@ -110,13 +111,13 @@ The file contains a JSON array of event objects. Each event has core properties 
       },
       "start": {
         "type": "string",
-        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}$",
-        "description": "Event start timestamp without timezone indicator"
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$",
+        "description": "Event start timestamp in ISO 8601 format with Z (UTC) indicator"
       },
       "end": {
         "type": "string",
-        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}$",
-        "description": "Event end timestamp without timezone indicator"
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$",
+        "description": "Event end timestamp in ISO 8601 format with Z (UTC) indicator"
       },
       "timezone": {
         "type": ["string", "null"],
@@ -136,13 +137,13 @@ The file contains a JSON array of event objects. Each event has core properties 
 |----------|------|----------|-------------|
 | `eventID` | string | Yes | Unique identifier using consistent naming patterns based on event type |
 | `name` | string | Yes | Display name shown to players, may include Pokémon names and forms |
-| `eventType` | string | Yes | Event category identifier with " skeleton-loading" suffix |
-| `heading` | string | Yes | Display-friendly category label without suffix |
+| `eventType` | string | Yes | Event category identifier (e.g., "community-day", "event", "raid-battles") |
+| `heading` | string | Yes | Display-friendly category label |
 | `image` | string (URI) | Yes | Banner image URL - default images indicate placeholder status |
 | `imageWidth` | integer | Yes | Banner width in pixels |
 | `imageHeight` | integer | Yes | Banner height in pixels |
-| `start` | string | Yes | ISO 8601 timestamp without timezone suffix |
-| `end` | string | Yes | ISO 8601 timestamp without timezone suffix |
+| `start` | string | Yes | ISO 8601 timestamp with Z (UTC) indicator |
+| `end` | string | Yes | ISO 8601 timestamp with Z (UTC) indicator |
 | `timezone` | string/null | Yes | Determines how to interpret timestamps |
 | `extraData` | object/null | Yes | Detailed event information (frequently null for future events) |
 ## Event ID Patterns
@@ -156,34 +157,30 @@ The `eventID` field follows consistent naming conventions based on event type:
 | `{pokemon}-in-{location}-{month}-{year}` | `blacephalon-in-raids-january-2026` | Raid rotations |
 **Important:** The eventID is the true unique identifier. Multiple events can share identical names (e.g., weekly Raid Hours with the same bosses) but will always have different eventIDs incorporating dates.
 ## Event Type Classification
-### The "skeleton-loading" Suffix
-**Critical:** All `eventType` values in the actual data include the suffix `" skeleton-loading"`:
+
+### Event Type Values
+The `eventType` field identifies the category of event. Values are lowercase with hyphens:
 ```json
-"eventType": "community-day skeleton-loading"
-"eventType": "event skeleton-loading"
-"eventType": "raid-battles skeleton-loading"
+"eventType": "community-day"
+"eventType": "event"
+"eventType": "raid-battles"
 ```
-This suffix appears to be:
-- A CSS class name or UI rendering state indicator
-- Consistently present across all events in the dataset
-- Correlated with null `extraData` (events awaiting detailed information)
-**When filtering by event type**, you must account for this suffix:
+
+**When filtering by event type**, use direct string comparison:
 ```javascript
-// Method 1: Include suffix in comparison
+// Filter by exact type
 const communityDays = events.filter(e => 
-  e.eventType === 'community-day skeleton-loading'
+  e.eventType === 'community-day'
 );
-// Method 2: Use prefix matching
+
+// Use prefix matching for related types
 const raidEvents = events.filter(e => 
-  e.eventType.startsWith('raid-battles')
+  e.eventType.startsWith('raid-')
 );
-// Method 3: Extract base type
-function getBaseEventType(eventType) {
-  return eventType.replace(' skeleton-loading', '');
-}
 ```
-### Base Event Types
-Once the suffix is removed, these are the core event types:
+
+### Event Types
+These are the event types found in the data:
 | Event Type | Description | Typical Duration |
 |------------|-------------|------------------|
 | `event` | General in-game events with spawns, bonuses, features | 3-7 days |
@@ -206,12 +203,11 @@ Once the suffix is removed, these are the core event types:
 The `heading` field is the human-readable version of the event type:
 | eventType | heading |
 |-----------|---------|
-| `community-day skeleton-loading` | `Community Day` |
-| `raid-battles skeleton-loading` | `Raid Battles` |
-| `pokemon-spotlight-hour skeleton-loading` | `Pokémon Spotlight Hour` |
-| `go-battle-league skeleton-loading` | `GO Battle League` |
+| `community-day` | `Community Day` |
+| `raid-battles` | `Raid Battles` |
+| `pokemon-spotlight-hour` | `Pokémon Spotlight Hour` |
+| `go-battle-league` | `GO Battle League` |
 **Purpose:** Use `heading` for display in user interfaces, as it:
-- Excludes the " skeleton-loading" suffix
 - Uses proper capitalization and spacing
 - Provides consistent formatting
 ## Event Naming Conventions
@@ -247,16 +243,16 @@ Follows the pattern: `"{Leagues/Cups} | {Season Name}"`:
 - **Max Monday:** `"Dynamax {Pokémon} during Max Monday"`
 ## Timestamp and Timezone Handling
 ### Timestamp Format
-Timestamps use **ISO 8601 format WITHOUT timezone indicators**:
+Timestamps use **ISO 8601 format WITH timezone indicators**:
 ```json
-"start": "2026-01-04T14:00:00.000"
-"end": "2026-01-04T17:00:00.000"
+"start": "2026-01-04T14:00:00.000Z"
+"end": "2026-01-04T17:00:00.000Z"
 ```
 **Format breakdown:**
 - `YYYY-MM-DD` - Date
 - `T` - Separator
 - `HH:mm:ss.SSS` - Time with milliseconds (always `.000`)
-- **No `Z` or `+00:00`** - Timezone determined by separate field
+- `Z` - UTC/GMT timezone indicator (always present)
 ### Timezone Field Interpretation
 The `timezone` field is **critical** for correctly interpreting timestamps:
 | timezone Value | Interpretation | Use Case | Example Events |
@@ -267,8 +263,8 @@ The `timezone` field is **critical** for correctly interpreting timestamps:
 ```javascript
 // Community Day: 14:00-17:00 Local Time
 {
-  "start": "2026-01-18T14:00:00.000",
-  "end": "2026-01-18T17:00:00.000",
+  "start": "2026-01-18T14:00:00.000Z",
+  "end": "2026-01-18T17:00:00.000Z",
   "timezone": "Local Time"
 }
 // Starts at 14:00 in New York, 14:00 in London, 14:00 in Tokyo (different moments)
@@ -285,11 +281,11 @@ The `timezone` field is **critical** for correctly interpreting timestamps:
 // Helper function to parse event timestamps correctly
 function getEventDate(timestamp, timezone) {
   if (timezone === "Local Time") {
-    // Parse as local time
-    return new Date(timestamp);
+    // Parse as local time (strip Z suffix for local interpretation)
+    return new Date(timestamp.replace('Z', ''));
   } else {
-    // Parse as UTC (add Z suffix)
-    return new Date(timestamp + 'Z');
+    // Parse as UTC (timestamp already has Z suffix)
+    return new Date(timestamp);
   }
 }
 // Check if event is currently active
@@ -429,8 +425,7 @@ The `extraData` field is designed to contain comprehensive event details but is 
 - Future events not yet fully announced
 - Placeholder entries for scheduled events
 - Events using default banner images
-- Recurring weekly features (Raid Hour, Spotlight Hour)
-**Current Dataset:** All events in the provided sample have `extraData: null`.
+
 ### Designed Structure (When Present)
 When `extraData` is populated, it contains event-specific information such as:
 **General Events:**
@@ -568,9 +563,9 @@ const activeNow = getEventsAtTime(events, now);
 console.log(`${activeNow.length} events currently active`);
 // Group by event type
 const activeByType = activeNow.reduce((acc, e) => {
-  const baseType = getBaseEventType(e.eventType);
-  if (!acc[baseType]) acc[baseType] = [];
-  acc[baseType].push(e);
+  const type = e.eventType;
+  if (!acc[type]) acc[type] = [];
+  acc[type].push(e);
   return acc;
 }, {});
 ```
@@ -644,12 +639,12 @@ function getCurrentEvents(events) {
   
   return events.filter(event => {
     const start = event.timezone === "Local Time" 
-      ? new Date(event.start)
-      : new Date(event.start + 'Z');
+      ? new Date(event.start.replace('Z', ''))
+      : new Date(event.start);
     
     const end = event.timezone === "Local Time"
-      ? new Date(event.end)
-      : new Date(event.end + 'Z');
+      ? new Date(event.end.replace('Z', ''))
+      : new Date(event.end);
     
     return now >= start && now <= end;
   });
@@ -659,24 +654,19 @@ console.log('Currently active:', currentEvents.map(e => e.name));
 ```
 ### Filtering by Event Type
 ```javascript
-// Extract base event type (remove suffix)
-function getBaseEventType(eventType) {
-  return eventType.replace(' skeleton-loading', '');
-}
 // Get all Community Days
 const communityDays = events.filter(e => 
-  getBaseEventType(e.eventType) === 'community-day'
+  e.eventType === 'community-day'
 );
 // Get all raid-related events
 const raidEvents = events.filter(e => {
-  const baseType = getBaseEventType(e.eventType);
-  return baseType === 'raid-battles' || 
-         baseType === 'raid-hour' || 
-         baseType === 'raid-day';
+  return e.eventType === 'raid-battles' || 
+         e.eventType === 'raid-hour' || 
+         e.eventType === 'raid-day';
 });
-// Group by base type
+// Group by event type
 const byType = events.reduce((acc, event) => {
-  const type = getBaseEventType(event.eventType);
+  const type = event.eventType;
   if (!acc[type]) acc[type] = [];
   acc[type].push(event);
   return acc;
@@ -694,8 +684,8 @@ function getUpcomingEvents(events, days = 7) {
   return events
     .filter(e => {
       const start = e.timezone === "Local Time"
-        ? new Date(e.start)
-        : new Date(e.start + 'Z');
+        ? new Date(e.start.replace('Z', ''))
+        : new Date(e.start);
       return start > now && start <= future;
     })
     .sort((a, b) => new Date(a.start) - new Date(b.start));
@@ -784,13 +774,13 @@ function parseGBLEvent(event) {
     event: event,
     leagues: leagueList,
     season: season,
-    start: new Date(event.start + 'Z'), // GBL uses UTC
-    end: new Date(event.end + 'Z')
+    start: new Date(event.start), // GBL uses UTC (timestamp has Z)
+    end: new Date(event.end)
   };
 }
 // Get current GBL rotation
 const gblEvents = events
-  .filter(e => getBaseEventType(e.eventType) === 'go-battle-league')
+  .filter(e => e.eventType === 'go-battle-league')
   .map(parseGBLEvent);
 const now = new Date();
 const currentGBL = gblEvents.find(e => e.start <= now && e.end >= now);
@@ -825,7 +815,7 @@ console.log(`${placeholders.length} placeholder events`);
 console.log(`${detailed.length} detailed events`);
 // Group placeholders by type
 const placeholdersByType = placeholders.reduce((acc, e) => {
-  const type = getBaseEventType(e.eventType);
+  const type = e.eventType;
   acc[type] = (acc[type] || 0) + 1;
   return acc;
 }, {});
@@ -835,8 +825,7 @@ console.log('Placeholder breakdown:', placeholdersByType);
 ```javascript
 // Get current raid bosses
 const raidBosses = events.filter(e => {
-  const baseType = getBaseEventType(e.eventType);
-  return baseType === 'raid-battles' || baseType === 'mega-raids';
+  return e.eventType === 'raid-battles' || e.eventType === 'mega-raids';
 });
 const now = new Date();
 const activeRaids = raidBosses.filter(e => {
@@ -862,7 +851,7 @@ function analyzeEventDurations(events) {
     
     return {
       name: event.name,
-      type: getBaseEventType(event.eventType),
+      type: event.eventType,
       hours: hours,
       category: categorizeDuration(hours)
     };
@@ -893,8 +882,8 @@ Object.entries(byCat).forEach(([cat, evts]) => {
 ```
 ## Best Practices
 ### Data Consumption
-1. **Always account for the " skeleton-loading" suffix** when filtering by `eventType`. Either match the exact string or strip the suffix.
-2. **Treat extraData as frequently null**. The current dataset shows all events with `extraData: null`. Build your application to handle this gracefully.
+1. **Filter by eventType using direct string comparison**. The eventType values are lowercase with hyphens (e.g., "community-day", "raid-battles").
+2. **Treat extraData as frequently null**. Many events have `extraData: null`. Build your application to handle this gracefully.
 3. **Use eventID as the unique identifier**, not event name. Multiple events can share names (e.g., weekly Raid Hours).
 4. **Handle timezone carefully**. The `timezone` field determines whether timestamps are local or UTC. Always check this before parsing dates.
 5. **Expect overlapping events**. Multiple events running simultaneously is normal, not a data error.
@@ -920,7 +909,7 @@ const upcomingEvents = events.filter(e =>
 2. **Build type indexes** for frequent filtering:
 ```javascript
 const typeIndex = events.reduce((acc, e) => {
-  const type = getBaseEventType(e.eventType);
+  const type = e.eventType;
   if (!acc[type]) acc[type] = [];
   acc[type].push(e);
   return acc;
@@ -933,17 +922,16 @@ const allCommunityDays = typeIndex['community-day'] || [];
 const eventsWithDates = events.map(e => ({
   ...e,
   startDate: e.timezone === "Local Time" 
-    ? new Date(e.start)
-    : new Date(e.start + 'Z'),
+    ? new Date(e.start.replace('Z', ''))
+    : new Date(e.start),
   endDate: e.timezone === "Local Time"
-    ? new Date(e.end)
-    : new Date(e.end + 'Z')
+    ? new Date(e.end.replace('Z', ''))
+    : new Date(e.end)
 }));
 ```
 ## Important Notes
 - **Data volatility**: Events are constantly added, updated, and removed. The dataset represents a snapshot that can become outdated quickly. Always fetch fresh data regularly.
 - **Placeholder prevalence**: Many future events appear as placeholders with default images and null extraData. Expect limited information until events are fully announced.
-- **The " skeleton-loading" suffix**: This unusual pattern appears consistently across all event types and must be accounted for in any filtering logic.
 - **Timezone complexity**: Events use either local time (same hour everywhere) or UTC (same moment everywhere). Misinterpreting this can cause display errors spanning multiple timezones.
 - **Event overlap is normal**: Multiple events running simultaneously is intentional game design (e.g., general event + raid rotation + weekly features + season + GO Pass).
 - **Recurring events have separate entries**: Each instance of Raid Hour, Spotlight Hour, or Max Monday is a distinct entry with a unique eventID.
