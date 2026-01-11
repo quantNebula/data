@@ -1,0 +1,1604 @@
+[
+  {
+    "name": "Bulbasaur",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm1.icon.png",
+    "imageWidth": 107,
+    "imageHeight": 126,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_001_00_shiny.png",
+    "combatPower": {
+      "min": 637,
+      "max": 637
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Charmander",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm4.icon.png",
+    "imageWidth": 91,
+    "imageHeight": 110,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_004_00_shiny.png",
+    "combatPower": {
+      "min": 560,
+      "max": 560
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Squirtle",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm7.icon.png",
+    "imageWidth": 95,
+    "imageHeight": 101,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_007_00_shiny.png",
+    "combatPower": {
+      "min": 540,
+      "max": 540
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Chikorita",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm152.icon.png",
+    "imageWidth": 57,
+    "imageHeight": 115,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_152_00_shiny.png",
+    "combatPower": {
+      "min": 534,
+      "max": 534
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Cyndaquil",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm155.icon.png",
+    "imageWidth": 86,
+    "imageHeight": 99,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_155_00_shiny.png",
+    "combatPower": {
+      "min": 560,
+      "max": 560
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Totodile",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm158.icon.png",
+    "imageWidth": 99,
+    "imageHeight": 113,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_158_00_shiny.png",
+    "combatPower": {
+      "min": 646,
+      "max": 646
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Treecko",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm252.icon.png",
+    "imageWidth": 85,
+    "imageHeight": 108,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_252_00_shiny.png",
+    "combatPower": {
+      "min": 601,
+      "max": 601
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Torchic",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm255.icon.png",
+    "imageWidth": 54,
+    "imageHeight": 103,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_255_00_shiny.png",
+    "combatPower": {
+      "min": 624,
+      "max": 624
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Mudkip",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm258.icon.png",
+    "imageWidth": 68,
+    "imageHeight": 100,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_258_00_shiny.png",
+    "combatPower": {
+      "min": 644,
+      "max": 644
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Turtwig",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm387.icon.png",
+    "imageWidth": 68,
+    "imageHeight": 101,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_387_00_shiny.png",
+    "combatPower": {
+      "min": 678,
+      "max": 678
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Chimchar",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm390.icon.png",
+    "imageWidth": 62,
+    "imageHeight": 108,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_390_00_shiny.png",
+    "combatPower": {
+      "min": 547,
+      "max": 547
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Piplup",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm393.icon.png",
+    "imageWidth": 88,
+    "imageHeight": 99,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_393_00_shiny.png",
+    "combatPower": {
+      "min": 614,
+      "max": 614
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Snivy",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm495.icon.png",
+    "imageWidth": 82,
+    "imageHeight": 79,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_495_00_shiny.png",
+    "combatPower": {
+      "min": 485,
+      "max": 485
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Tepig",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm498.icon.png",
+    "imageWidth": 79,
+    "imageHeight": 111,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_498_00_shiny.png",
+    "combatPower": {
+      "min": 618,
+      "max": 618
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Oshawott",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm501.icon.png",
+    "imageWidth": 91,
+    "imageHeight": 108,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_501_00_shiny.png",
+    "combatPower": {
+      "min": 597,
+      "max": 597
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Chespin",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm650.icon.png",
+    "imageWidth": 80,
+    "imageHeight": 112,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_650_00_shiny.png",
+    "combatPower": {
+      "min": 626,
+      "max": 626
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Fennekin",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm653.icon.png",
+    "imageWidth": 100,
+    "imageHeight": 112,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_653_00_shiny.png",
+    "combatPower": {
+      "min": 587,
+      "max": 587
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Froakie",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm656.icon.png",
+    "imageWidth": 89,
+    "imageHeight": 100,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_656_00_shiny.png",
+    "combatPower": {
+      "min": 567,
+      "max": 567
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Rowlet",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm722.icon.png",
+    "imageWidth": 81,
+    "imageHeight": 94,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_722_00_shiny.png",
+    "combatPower": {
+      "min": 604,
+      "max": 604
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Litten",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm725.icon.png",
+    "imageWidth": 95,
+    "imageHeight": 121,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_725_00_shiny.png",
+    "combatPower": {
+      "min": 591,
+      "max": 591
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Popplio",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm728.icon.png",
+    "imageWidth": 108,
+    "imageHeight": 98,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_728_00_shiny.png",
+    "combatPower": {
+      "min": 645,
+      "max": 645
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Grookey",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm810.icon.png",
+    "imageWidth": 75,
+    "imageHeight": 97,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 620,
+      "max": 620
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Scorbunny",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm813.icon.png",
+    "imageWidth": 60,
+    "imageHeight": 113,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 627,
+      "max": 627
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Sobble",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm816.icon.png",
+    "imageWidth": 64,
+    "imageHeight": 98,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 627,
+      "max": 627
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Sprigatito",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm906.icon.png",
+    "imageWidth": 66,
+    "imageHeight": 99,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_906_00_shiny.png",
+    "combatPower": {
+      "min": 579,
+      "max": 579
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Fuecoco",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm909.icon.png",
+    "imageWidth": 75,
+    "imageHeight": 103,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_909_00_shiny.png",
+    "combatPower": {
+      "min": 644,
+      "max": 644
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Quaxly",
+    "eggType": "1 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm912.icon.png",
+    "imageWidth": 75,
+    "imageHeight": 105,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_912_00_shiny.png",
+    "combatPower": {
+      "min": 614,
+      "max": 614
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Bonsly",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm438.icon.png",
+    "imageWidth": 66,
+    "imageHeight": 107,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_438_00_shiny.png",
+    "combatPower": {
+      "min": 744,
+      "max": 744
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Ducklett",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm580.icon.png",
+    "imageWidth": 72,
+    "imageHeight": 103,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_580_00_shiny.png",
+    "combatPower": {
+      "min": 489,
+      "max": 489
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Litleo",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm667.icon.png",
+    "imageWidth": 94,
+    "imageHeight": 121,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_667_00_shiny.png",
+    "combatPower": {
+      "min": 814,
+      "max": 814
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Smoliv",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm928.icon.png",
+    "imageWidth": 68,
+    "imageHeight": 91,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_928_00_shiny.png",
+    "combatPower": {
+      "min": 488,
+      "max": 488
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Meditite",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm307.icon.png",
+    "imageWidth": 97,
+    "imageHeight": 115,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_307_00_shiny.png",
+    "combatPower": {
+      "min": 396,
+      "max": 396
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Petilil",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm548.icon.png",
+    "imageWidth": 54,
+    "imageHeight": 94,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_548_00_shiny.png",
+    "combatPower": {
+      "min": 588,
+      "max": 588
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Bergmite",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm712.icon.png",
+    "imageWidth": 124,
+    "imageHeight": 151,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_712_00_shiny.png",
+    "combatPower": {
+      "min": 694,
+      "max": 694
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Wimpod",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm767.icon.png",
+    "imageWidth": 136,
+    "imageHeight": 61,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_767_00_shiny.png",
+    "combatPower": {
+      "min": 286,
+      "max": 286
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Cleffa",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm173.icon.png",
+    "imageWidth": 89,
+    "imageHeight": 83,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_173_00_shiny.png",
+    "combatPower": {
+      "min": 383,
+      "max": 383
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Igglybuff",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm174.icon.png",
+    "imageWidth": 64,
+    "imageHeight": 74,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_174_00_shiny.png",
+    "combatPower": {
+      "min": 306,
+      "max": 306
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Smoochum",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm238.icon.png",
+    "imageWidth": 76,
+    "imageHeight": 106,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_238_00_shiny.png",
+    "combatPower": {
+      "min": 738,
+      "max": 738
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 4,
+    "rarityTier": "Very Rare"
+  },
+  {
+    "name": "Larvesta",
+    "eggType": "2 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm636.icon.png",
+    "imageWidth": 122,
+    "imageHeight": 130,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_636_00_shiny.png",
+    "combatPower": {
+      "min": 855,
+      "max": 855
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 5,
+    "rarityTier": "Ultra Rare"
+  },
+  {
+    "name": "Inkay",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm686.icon.png",
+    "imageWidth": 66,
+    "imageHeight": 81,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_686_00_shiny.png",
+    "combatPower": {
+      "min": 529,
+      "max": 529
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Crabrawler",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm739.icon.png",
+    "imageWidth": 118,
+    "imageHeight": 96,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_739_00_shiny.png",
+    "combatPower": {
+      "min": 778,
+      "max": 778
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Komala",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm775.icon.png",
+    "imageWidth": 104,
+    "imageHeight": 91,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_775_00_shiny.png",
+    "combatPower": {
+      "min": 1475,
+      "max": 1475
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Togedemaru",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm777.icon.png",
+    "imageWidth": 99,
+    "imageHeight": 97,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_777_00_shiny.png",
+    "combatPower": {
+      "min": 1234,
+      "max": 1234
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Audino",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm531.icon.png",
+    "imageWidth": 120,
+    "imageHeight": 153,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_531_00_shiny.png",
+    "combatPower": {
+      "min": 961,
+      "max": 961
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 2,
+    "rarityTier": "Uncommon"
+  },
+  {
+    "name": "Elgyem",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm605.icon.png",
+    "imageWidth": 61,
+    "imageHeight": 123,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_605_00_shiny.png",
+    "combatPower": {
+      "min": 791,
+      "max": 791
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 2,
+    "rarityTier": "Uncommon"
+  },
+  {
+    "name": "Munchlax",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm446.icon.png",
+    "imageWidth": 91,
+    "imageHeight": 118,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_446_00_shiny.png",
+    "combatPower": {
+      "min": 1081,
+      "max": 1081
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Snom",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm872.icon.png",
+    "imageWidth": 88,
+    "imageHeight": 74,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 302,
+      "max": 302
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Indeedee (Male)",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm876.fMALE.icon.png",
+    "imageWidth": 78,
+    "imageHeight": 140,
+    "canBeShiny": true,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 1396,
+      "max": 1396
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Indeedee (Female)",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm876.fFEMALE.icon.png",
+    "imageWidth": 92,
+    "imageHeight": 134,
+    "canBeShiny": true,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 1370,
+      "max": 1370
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Larvesta",
+    "eggType": "5 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm636.icon.png",
+    "imageWidth": 122,
+    "imageHeight": 130,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_636_00_shiny.png",
+    "combatPower": {
+      "min": 855,
+      "max": 855
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 5,
+    "rarityTier": "Ultra Rare"
+  },
+  {
+    "name": "Riolu",
+    "eggType": "5 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm447.icon.png",
+    "imageWidth": 87,
+    "imageHeight": 123,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_447_00_shiny.png",
+    "combatPower": {
+      "min": 567,
+      "max": 567
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Bonsly",
+    "eggType": "5 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm438.icon.png",
+    "imageWidth": 66,
+    "imageHeight": 107,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_438_00_shiny.png",
+    "combatPower": {
+      "min": 744,
+      "max": 744
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Tirtouga",
+    "eggType": "5 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm564.icon.png",
+    "imageWidth": 187,
+    "imageHeight": 63,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_564_00_shiny.png",
+    "combatPower": {
+      "min": 850,
+      "max": 850
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Skarmory",
+    "eggType": "5 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm227.icon.png",
+    "imageWidth": 192,
+    "imageHeight": 133,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_227_00_shiny.png",
+    "combatPower": {
+      "min": 1204,
+      "max": 1204
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Archen",
+    "eggType": "5 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm566.icon.png",
+    "imageWidth": 180,
+    "imageHeight": 97,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_566_00_shiny.png",
+    "combatPower": {
+      "min": 1052,
+      "max": 1052
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Galarian Meowth",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm52.fGALARIAN.icon.png",
+    "imageWidth": 87,
+    "imageHeight": 108,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_052_31_shiny.png",
+    "combatPower": {
+      "min": 591,
+      "max": 591
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Galarian Zigzagoon",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm263.fGALARIAN.icon.png",
+    "imageWidth": 127,
+    "imageHeight": 128,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_263_31_shiny.png",
+    "combatPower": {
+      "min": 290,
+      "max": 290
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Galarian Darumaka",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm554.fGALARIAN.icon.png",
+    "imageWidth": 121,
+    "imageHeight": 122,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_554_31_shiny.png",
+    "combatPower": {
+      "min": 823,
+      "max": 823
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Galarian Stunfisk",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm618.fGALARIAN.icon.png",
+    "imageWidth": 121,
+    "imageHeight": 75,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_618_31_shiny.png",
+    "combatPower": {
+      "min": 1235,
+      "max": 1235
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Galarian Corsola",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm222.fGALARIAN.icon.png",
+    "imageWidth": 109,
+    "imageHeight": 111,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_222_31_shiny.png",
+    "combatPower": {
+      "min": 855,
+      "max": 855
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Alolan Geodude",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm74.fALOLA.icon.png",
+    "imageWidth": 157,
+    "imageHeight": 102,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_074_61_shiny.png",
+    "combatPower": {
+      "min": 739,
+      "max": 739
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Alolan Diglett",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm50.fALOLA.icon.png",
+    "imageWidth": 90,
+    "imageHeight": 89,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_050_61_shiny.png",
+    "combatPower": {
+      "min": 389,
+      "max": 389
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Galarian Corsola",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm222.fGALARIAN.icon.png",
+    "imageWidth": 109,
+    "imageHeight": 111,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_222_31_shiny.png",
+    "combatPower": {
+      "min": 855,
+      "max": 855
+    },
+    "isRegional": false,
+    "isGiftExchange": true,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Galarian Slowpoke",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm79.fGALARIAN.icon.png",
+    "imageWidth": 140,
+    "imageHeight": 97,
+    "canBeShiny": true,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 700,
+      "max": 700
+    },
+    "isRegional": false,
+    "isGiftExchange": true,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Hisuian Sneasel",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm215.fHISUIAN.icon.png",
+    "imageWidth": 110,
+    "imageHeight": 127,
+    "canBeShiny": true,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 1172,
+      "max": 1172
+    },
+    "isRegional": false,
+    "isGiftExchange": true,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Hisuian Growlithe",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm58.fHISUIAN.icon.png",
+    "imageWidth": 112,
+    "imageHeight": 132,
+    "canBeShiny": true,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 755,
+      "max": 755
+    },
+    "isRegional": false,
+    "isGiftExchange": true,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Basculin (White Striped)",
+    "eggType": "7 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm550.fWHITE_STRIPED.icon.png",
+    "imageWidth": 115,
+    "imageHeight": 108,
+    "canBeShiny": true,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 1194,
+      "max": 1194
+    },
+    "isRegional": false,
+    "isGiftExchange": true,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Beldum",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm374.icon.png",
+    "imageWidth": 68,
+    "imageHeight": 52,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_374_00_shiny.png",
+    "combatPower": {
+      "min": 558,
+      "max": 558
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Pawniard",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm624.icon.png",
+    "imageWidth": 65,
+    "imageHeight": 97,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_624_00_shiny.png",
+    "combatPower": {
+      "min": 819,
+      "max": 819
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Carbink",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm703.icon.png",
+    "imageWidth": 120,
+    "imageHeight": 112,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_703_00_shiny.png",
+    "combatPower": {
+      "min": 838,
+      "max": 838
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Toxel",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm848.icon.png",
+    "imageWidth": 75,
+    "imageHeight": 94,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_848_00_shiny.png",
+    "combatPower": {
+      "min": 415,
+      "max": 415
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Honedge",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm679.icon.png",
+    "imageWidth": 107,
+    "imageHeight": 109,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 794,
+      "max": 794
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Jangmo-o",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm782.icon.png",
+    "imageWidth": 85,
+    "imageHeight": 116,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_782_00_shiny.png",
+    "combatPower": {
+      "min": 553,
+      "max": 553
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Dreepy",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm885.icon.png",
+    "imageWidth": 67,
+    "imageHeight": 60,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 438,
+      "max": 438
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Charcadet",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm935.icon.png",
+    "imageWidth": 53,
+    "imageHeight": 127,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_935_00_shiny.png",
+    "combatPower": {
+      "min": 418,
+      "max": 418
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Tinkatink",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm957.icon.png",
+    "imageWidth": 108,
+    "imageHeight": 83,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_957_00_shiny.png",
+    "combatPower": {
+      "min": 491,
+      "max": 491
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Frigibax",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm996.icon.png",
+    "imageWidth": 97,
+    "imageHeight": 100,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_996_00_shiny.png",
+    "combatPower": {
+      "min": 712,
+      "max": 712
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 3,
+    "rarityTier": "Rare"
+  },
+  {
+    "name": "Larvesta",
+    "eggType": "10 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm636.icon.png",
+    "imageWidth": 122,
+    "imageHeight": 130,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_636_00_shiny.png",
+    "combatPower": {
+      "min": 855,
+      "max": 855
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 5,
+    "rarityTier": "Ultra Rare"
+  },
+  {
+    "name": "Dreepy",
+    "eggType": "10 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm885.icon.png",
+    "imageWidth": 67,
+    "imageHeight": 60,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 438,
+      "max": 438
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Beldum",
+    "eggType": "10 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm374.icon.png",
+    "imageWidth": 68,
+    "imageHeight": 52,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_374_00_shiny.png",
+    "combatPower": {
+      "min": 558,
+      "max": 558
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Drampa",
+    "eggType": "10 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm780.icon.png",
+    "imageWidth": 157,
+    "imageHeight": 173,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_780_00_shiny.png",
+    "combatPower": {
+      "min": 1665,
+      "max": 1665
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Turtonator",
+    "eggType": "10 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm776.icon.png",
+    "imageWidth": 168,
+    "imageHeight": 199,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_776_00_shiny.png",
+    "combatPower": {
+      "min": 1270,
+      "max": 1270
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Gible",
+    "eggType": "10 km",
+    "isAdventureSync": true,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm443.icon.png",
+    "imageWidth": 113,
+    "imageHeight": 131,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_443_00_shiny.png",
+    "combatPower": {
+      "min": 635,
+      "max": 635
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Sandile",
+    "eggType": "12 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm551.icon.png",
+    "imageWidth": 112,
+    "imageHeight": 79,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_551_00_shiny.png",
+    "combatPower": {
+      "min": 592,
+      "max": 592
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Vullaby",
+    "eggType": "12 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm629.icon.png",
+    "imageWidth": 98,
+    "imageHeight": 105,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_629_00_shiny.png",
+    "combatPower": {
+      "min": 726,
+      "max": 726
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Shroodle",
+    "eggType": "12 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm944.icon.png",
+    "imageWidth": 71,
+    "imageHeight": 87,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 531,
+      "max": 531
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Pancham",
+    "eggType": "12 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm674.icon.png",
+    "imageWidth": 89,
+    "imageHeight": 117,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_674_00_shiny.png",
+    "combatPower": {
+      "min": 850,
+      "max": 850
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Salandit",
+    "eggType": "12 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm757.icon.png",
+    "imageWidth": 137,
+    "imageHeight": 93,
+    "canBeShiny": true,
+    "shinyAssetUrl": "https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/pokemon_icon_757_00_shiny.png",
+    "combatPower": {
+      "min": 641,
+      "max": 641
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  },
+  {
+    "name": "Varoom",
+    "eggType": "12 km",
+    "isAdventureSync": false,
+    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm965.icon.png",
+    "imageWidth": 162,
+    "imageHeight": 110,
+    "canBeShiny": false,
+    "shinyAssetUrl": null,
+    "combatPower": {
+      "min": 650,
+      "max": 650
+    },
+    "isRegional": false,
+    "isGiftExchange": false,
+    "rarity": 1,
+    "rarityTier": "Common"
+  }
+]
